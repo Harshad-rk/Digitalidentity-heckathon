@@ -1,0 +1,32 @@
+.mynavbar{
+	height: 50px !important; 
+}
+.mynavbar h3 {
+	text-align: center;
+}
+.add{
+	margin: 30px 270px;
+	border-style: outset;
+}
+.addmargin{
+	margin: 30px 10px;
+}
+.submit {
+	    margin-left: 180px;
+}
+.view{
+	margin: 30px 270px;
+	border-style: outset;
+}
+.mynavbar p {
+	color: white;
+    margin-left: 427px !important;
+    text-align: center !important;
+}
+.mylist{
+    margin-left: 90px !important;
+    margin-right: 90px !important;
+}
+thead tr td {
+	align-items: center;
+}
