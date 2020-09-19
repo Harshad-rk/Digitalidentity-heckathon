@@ -657,7 +657,7 @@ function userside(){
 			if(data.length > 0){
 				for(i=0; i< data.length; i++){
 					if(data[i] == web3.eth.defaultAccount){
-						alert("viewdata");
+						// alert("viewdata");
 						DigitalIdentity.getuserContract(data[i],{from : web3.eth.defaultAccount}, (err, data) => {
 							if(err){
 								console.log(err);
@@ -719,7 +719,8 @@ function wievallAddress() {
 					var html = '';
 					html += `<tr>
 								<th scope="row">${i+1}</th>
-								<td><a href="javascript:void(0);" id="${data[i]}" class="permissionbyorg">${data[i]}</a> </td>
+								<td><a href="javascript:void(0);" >${data[i]}</a> </td>
+								<td><button id="${data[i]}" class="permissionbyorg btn-success btn">Request/View</button></td>
 							  </tr>`
 					$("#tablebody").append(html);		  
 				}
@@ -757,7 +758,7 @@ function orgrequestUser(){
 
 $(document).on('submit', '#Userresponce', function(e){
 	e.preventDefault();
-	alert("hlo");
+	// alert("hlo");
 	var name = document.getElementById("firstname").checked;
 	var dob =document.getElementById("dob").checked;
 	var address=document.getElementById("address").checked;
@@ -814,18 +815,18 @@ $(document).on('click', '.permissionbyorg', function(e){
 								UserIdentity.orgDataNameView(web3.eth.defaultAccount,{from : web3.eth.defaultAccount}, (err, data) => {
 									if(err){
 										console.log(err);
-										alert("pending for user permission");
+										alert("Request is pending wait for confirmation");
 										// alert(err);
 									}else{
 										console.log(data);
-										alert(data);
+										// alert(data);
 										UserIdentity.orgDataView(web3.eth.defaultAccount,{from : web3.eth.defaultAccount}, (err, result) => {
 											if(err){
 												console.log(err);
-												alert("pending for user permission");
+												alert("Request is pending wait for confirmation");
 											}else{
 												console.log(result);
-												alert(result);
+												// alert(result);
 												if(result.length >= 0){
 													document.getElementById("name").value = data[0];
 													document.getElementById("date").value = data[1]; 
@@ -864,7 +865,7 @@ function orgrequest(){
 
 $(document).on('submit', '#orgrequest', function(e){
 	e.preventDefault();
-	alert("hlo");
+	// alert("hlo");
 	var name = document.getElementById("firstname").checked;
 	var dob =document.getElementById("dob").checked;
 	var address=document.getElementById("address").checked;
@@ -878,8 +879,8 @@ $(document).on('submit', '#orgrequest', function(e){
 		if(err){
 			console.log(err);
 		}else{
-			alert("request sucess");
-			alert(`tr hash : ${data}`);
+			alert("Request success");
+			alert(`Transaction Hash : ${data}`);
 			console.log(data);
 			window.location.href = "index.html";
 		}
@@ -888,7 +889,7 @@ $(document).on('submit', '#orgrequest', function(e){
 
 $(document).on('submit', '#needs-validation', function(e){
 	e.preventDefault();
-	alert("hlo");
+	// alert("hlo");
       var name = document.getElementById("firstname").value;
       var dob =document.getElementById("dob").value;
       var address=document.getElementById("address").value;
@@ -901,8 +902,8 @@ $(document).on('submit', '#needs-validation', function(e){
 		if(err){
 			console.log(err);
 		}else{
-			alert("your regristation is sucessfull..!");
-			alert(`Hash for view on etherscan : ${data}`);
+			alert("Your Data is Added is sucessfull..!");
+			alert(`Transaction Hash : ${data}`);
 			console.log(data);
 		}
 	});  
