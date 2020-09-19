@@ -4,7 +4,7 @@ KYC System based on Ethereum Blockchain
 
 live link : https://harshad-rk.github.io/Digitalidentity-heckathon/src/
 
-Solidty Contract Address :  0x459a32bc64a5588affbf82887ce88be67a9c8237
+Smart Contract Address :  0x459a32bc64a5588affbf82887ce88be67a9c8237
 
 This project is deployed on Ropsten test network.
 
