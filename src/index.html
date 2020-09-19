@@ -24,9 +24,42 @@
                 }, false);  
             }, false);  
         })();  
+
+        $(document).ready(function(){
+        web3.eth.getAccounts((err, res) => {                   
+            cuerrentAccount = res[0];
+            $("#currentId").append(cuerrentAccount);
+            });
+		});
         </script>  
 </head>  
-<body>  
+<body> 
+    <header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary static-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+          <img src="logo.png" width="15%" alt="">
+        </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home
+                <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="javascript:void(0);">
+                <span id="currentId"></span>
+              </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</header> 
     <div class="container py-5" id="customerview" style="display: none;">  
         <div class="row">  
             <div class="offset-md-2 col-md-8 offset-md-2">  
@@ -131,7 +164,7 @@
             <div class="offset-md-2 col-md-8 offset-md-2">  
                 <div class="card">  
                     <div class="card-header bg-primary text-white">  
-                        <h4 class="card-title text-uppercase">Your Details</h4>  
+                        <h4 class="card-title text-uppercase">Details</h4>  
                     </div>  
                     <div class="card-body">  
                             <div class="row">  
@@ -227,7 +260,7 @@
             <tr>
               <th scope="col">No.</th>
               <th scope="col">Account Address</th>
-              <th scope="col">Request Date </th>
+              <th scope="col">Data </th>
             </tr>
           </thead>
           <tbody id="tablebody">

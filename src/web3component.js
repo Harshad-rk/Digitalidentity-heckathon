@@ -719,7 +719,7 @@ function wievallAddress() {
 					var html = '';
 					html += `<tr>
 								<th scope="row">${i+1}</th>
-								<td><a href="javascript:void(0);" >${data[i]}</a> </td>
+								<td>${data[i]}</td>
 								<td><button id="${data[i]}" class="permissionbyorg btn-success btn">Request/View</button></td>
 							  </tr>`
 					$("#tablebody").append(html);		  
