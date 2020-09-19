@@ -693,7 +693,9 @@ function userside(){
 													}
 												}
 											}
-										});
+                                        });
+                                        $("#customerview").hide();
+                                        $("#customerviewData").hide();
 									}
 								})
 							}
