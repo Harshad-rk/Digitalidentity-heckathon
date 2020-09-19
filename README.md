@@ -1,4 +1,4 @@
-# Digitalidentity-heckathon
+# Digitalidentity
 
 KYC System based on Ethereum Blockchain
 
