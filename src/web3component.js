@@ -817,7 +817,7 @@ $(document).on('click', '.permissionbyorg', function(e){
 								UserIdentity.orgDataNameView(web3.eth.defaultAccount,{from : web3.eth.defaultAccount}, (err, data) => {
 									if(err){
 										console.log(err);
-										alert("Request is pending wait for confirmation");
+										alert("Request is pending wait for confirmation"); return;
 										// alert(err);
 									}else{
 										console.log(data);
@@ -825,7 +825,7 @@ $(document).on('click', '.permissionbyorg', function(e){
 										UserIdentity.orgDataView(web3.eth.defaultAccount,{from : web3.eth.defaultAccount}, (err, result) => {
 											if(err){
 												console.log(err);
-												alert("Request is pending wait for confirmation");
+												alert("Request is pending wait for confirmation"); return;
 											}else{
 												console.log(result);
 												// alert(result);
@@ -836,15 +836,17 @@ $(document).on('click', '.permissionbyorg', function(e){
 													document.getElementById("Email").value = result[0];
 													document.getElementById("phoneNumber").value = result[1];
 													document.getElementById("adharNumber").value =result[2];
-													document.getElementById("panNumber").value = result[3];
-													$("#customerviewData").show();
+                                                    document.getElementById("panNumber").value = result[3];
+                                                    $("#customerviewData").show();
+                                                    return;
 												}
 											}
 										})
 									}
 								})
 							}
-						});
+                        });
+                        return;
 					}else if(i ==  data.length-1){
 						window.location.href = "conform.html?id=" + id;
 					}
