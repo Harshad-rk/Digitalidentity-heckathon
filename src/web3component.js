@@ -687,7 +687,7 @@ function userside(){
 													for(i=0; i< data.length; i++){
 														if(data[i] == web3.eth.defaultAccount){
 															var html = ' ';
-															html += `<button class="btn btn-primary rounded-0 viewrequestUser" id=${data[i]} >Bank request</button> `;
+															html += `<button class="btn btn-primary rounded-0 viewrequestUser" id=${data[i]}>Pending Request</button> `;
 															$("#bankRequest").append(html);
 														}
 													}
