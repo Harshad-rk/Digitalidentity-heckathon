@@ -784,7 +784,7 @@ $(document).on('submit', '#Userresponce', function(e){
 						if(err){
 							console.log(err);
 						}else{
-							
+							window.location.href = "index.html";
 						}
 					})
 				}
