@@ -694,7 +694,8 @@ function userside(){
 													}
 												}
 											}
-                                        });
+										});
+										
 									}
 								})
 							}
@@ -709,6 +710,7 @@ function userside(){
 		}
 	});
 }
+
 
 function wievallAddress() {
 	DigitalIdentity.getAllAddress({from : web3.eth.defaultAccount}, (err, data) => {
