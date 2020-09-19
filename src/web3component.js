@@ -678,6 +678,7 @@ function userside(){
 										document.getElementById("adharNumber").value =data[5];
 										document.getElementById("panNumber").value = data[6];
 										$("#customerviewData").show();
+										$("#customerview").hide();
 										DigitalIdentity.requestedUserAdrs({from : web3.eth.defaultAccount}, (err, data) => {
 											if(err){
 												console.log(err);
@@ -694,8 +695,6 @@ function userside(){
 												}
 											}
                                         });
-                                        $("#customerview").hide();
-                                        $("#customerviewData").hide();
 									}
 								})
 							}
