@@ -698,7 +698,7 @@ function userside(){
 								})
 							}
 						});
-					}else if(i == data.length){
+					}else if(i == data.length-1){
 						$("#customerview").show();
 					}
 				}
@@ -842,7 +842,7 @@ $(document).on('click', '.permissionbyorg', function(e){
 								})
 							}
 						});
-					}else if(i ==  data.length){
+					}else if(i ==  data.length-1){
 						window.location.href = "conform.html?id=" + id;
 					}
 				}
